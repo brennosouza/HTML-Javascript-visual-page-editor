@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="script.js" type="text/javascript" ></script>
+		<link rel="stylesheet" href="style.css">
+
+    </head>
+
+
+    <body id="body"> 
+
+		<div id="buttoncontainer" style="float:left; width: 10%; height: 30vh; overflow:auto;" >
+			<button onclick="newButton()">New button</button>
+			<button onclick="newHeader()">New header</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+			<button onclick="newButton()">New button</button>
+		</div>
+
+		<iframe class="responsive-iframe" id="iframecontent" meta =" " style ="float:left; width:60vw; height: 90vh;"></iframe>
+
+
+
+		<div id="htmltree" style="float:left; margin-left: 10px; width: 20vw; overflow: auto;">
+
+			<ul id="treelist" >
+				<li id="htmlli" ><span class="caret" referralid="body">HTML</span>
+				  <ul class="nested">
+					<li id="headli"><span class="caret">Head</span>
+					<li id="bodyli" referralid="body" name="body"><span class="caret body" referralid="body" name="body">Body</span> <ul class="nested" id="bodyul" referralid="body"></ul>
+					<li>Coffee</li>
+					<li><span class="caret">Tea</span>
+					  <ul class="nested">
+						<li>Black Tea</li>
+						<li>White Tea</li>
+						<li><span class="caret">Green Tea</span>
+						  <ul class="nested">
+							<li>Sencha</li>
+							<li>Gyokuro</li>
+							<li>Matcha</li>
+							<li>Pi Lo Chun</li>
+						  </ul>
+						</li>
+					  </ul>
+					</li>  
+				  </ul>
+				</li>
+			</ul>
+			
+			<input type="checkbox" id="designmodecheckbox" name="designmodecheckbox" onclick="designModeToggle()" checked="on">
+			<label for="designmodecheckbox">Design mode</label><br>
+
+			<input type="checkbox" id="darkmodecheckbox" name="darkmodecheckbox" onclick="darkModeToggle()" checked="on">
+			<label for="darkmodecheckbox">Dark mode</label><br>
+
+		</div>
+
+
+
+		<script>
+
+			//Tree list
+			var toggler = document.getElementsByClassName("caret");
+			var i;
+			
+			for (i = 0; i < toggler.length; i++) {
+				toggler[i].addEventListener("click", function() {
+				this.parentElement.querySelector(".nested").classList.toggle("active");
+				this.classList.toggle("caret-down");
+				
+
+				var test = this.getAttribute("referralid");
+
+				console.log(this);
+				console.log(this.getAttribute("referralid"));
+				console.log(this.classList[1]);
+				console.log(this.referralid);
+				console.log(this.name);
+				console.log(this.innerHTML);
+				console.log(this.style);
+
+
+				// console.log(this.classList[1]);
+
+				//pegar por numero de aparicao?
+
+				//Passando a node selecionado para a variável global
+				// selectedtreenode = this.referralid;
+				selectedtreenode = document.getElementById(this.classList[1]);
+				console.log(selectedtreenode);
+				});
+			}
+
+			// Para checar se o dark mode já está ativado
+			darkModeToggle()
+
+			//Adicionar meta tag para o html do iframe para responsividade
+			addmetatagiframe()
+
+			//Ativando design mode por padrão
+			{
+				let iframe = getIframeDocument();
+				iframe.designMode = "on";
+			}
+
+			</script>
+
+    
+    </body>
+
+
+</html>
