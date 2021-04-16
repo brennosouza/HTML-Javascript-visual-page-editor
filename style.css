@@ -46,11 +46,15 @@ ul, #myUL {
 
   }
 
-  span:active{
+  span:active {
     background-color: yellow;
   }
 
-  /* ul:visited {
+  li:active {
+    color: yellow;
+  }
+
+  /* ul:active {
     background-color: yellow;
   } */
 
