@@ -156,7 +156,10 @@ function addtoTreeList(liname, referralid){
   // span.textContent = "Span";
   // item.appendChild(span);
 
-  item.addEventListener("click", function() {console.log("hdalsf")} );
+  // item.addEventListener("click", function() {console.log("hdalsf")} );
+  item.addEventListener("click", function() { this.style.color='red'; } );
+
+  
   
   
   console.log(item.referralid);
@@ -165,6 +168,11 @@ function addtoTreeList(liname, referralid){
 
   list.appendChild(item);
 
+}
+
+function deleteSelectedNode(){
+  var node = document.getElementById(selectedtreenode);
+  document.removeChild(node)
 }
 
 function treeListItemSelected(){
