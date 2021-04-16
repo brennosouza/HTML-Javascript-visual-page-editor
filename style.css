@@ -34,12 +34,26 @@ ul, #myUL {
   
   .active {
     display: block;
+    color: red;
+  }
+
+  .selected {
+    color: red;
   }
 
   iframe, div {
     border: '1px solid #000000';
 
   }
+
+  span:active{
+    background-color: yellow;
+  }
+
+  /* ul:visited {
+    background-color: yellow;
+  } */
+
 
 
 .dark,

@@ -157,7 +157,7 @@ function addtoTreeList(liname, referralid){
   // item.appendChild(span);
 
   // item.addEventListener("click", function() {console.log("hdalsf")} );
-  item.addEventListener("click", function() { this.style.color='red'; } );
+  item.addEventListener("click", function() {  } ); //treeListItemSelected(this);
 
   
   
@@ -170,14 +170,23 @@ function addtoTreeList(liname, referralid){
 
 }
 
+function togglecolor(me){
+  this.style.color='red';
+}
+
 function deleteSelectedNode(){
   var node = document.getElementById(selectedtreenode);
   document.removeChild(node)
 }
 
-function treeListItemSelected(){
-  console.log("teste");
-  // selectedtreenode = "teste";
+function treeListItemSelected(stuff){
+  // selectedtreenode=this; 
+  console.log(selectedtreenode.DOCUMENT_NODE);
+  selectedtreenode.style.color = 'white';
+  seletectedtreenode = stuff;
+  console.log(stuff);
+  stuff.style.color = 'red';
+  console.log(selectedtreenode);
   // selectedtreenode = this.referralid;
 }
 
