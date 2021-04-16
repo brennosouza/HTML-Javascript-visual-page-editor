@@ -147,7 +147,8 @@ function updateTreeList(){
 function addtoTreeList(liname, referralid){
   var list = document.getElementById("bodyul");
   var item = document.createElement("li");
-  item.referralid = referralid;
+  item.setAttribute("referralid", referralid);
+  // item.referralid = referralid;
 
   var span = document.createElement("span");
   span.textContent = liname;
@@ -162,7 +163,7 @@ function addtoTreeList(liname, referralid){
   // item.appendChild(span);
 
   // item.addEventListener("click", function() {console.log("hdalsf")} );
-  item.addEventListener("click", function() {  } ); //treeListItemSelected(this);
+  item.addEventListener("click", function() { selectedtreenode = this; treeListItemSelected(this) } ); //treeListItemSelected(this);
 
   
   
@@ -180,17 +181,31 @@ function togglecolor(me){
 }
 
 function deleteSelectedNode(){
-  var node = document.getElementById(selectedtreenode);
-  document.removeChild(node)
+  // var node = document.getElementById(selectedtreenode);
+  var item = selectedtreenode;
+  console.log(item);
+  var attribute = item.getAttribute("referralid").toString();
+
+  
+
+  var element = getIframeDocument().getElementById(attribute)
+  console.log(element);
+  element.remove();
+
+
+  // document.getElementById(attribute).remove();
+
+  item.remove();
+  // document.removeChild(item)
 }
 
 function treeListItemSelected(stuff){
   // selectedtreenode=this; 
   console.log(selectedtreenode.DOCUMENT_NODE);
-  selectedtreenode.style.color = 'white';
+  selectedtreenode.style.color = 'green';
   seletectedtreenode = stuff;
   console.log(stuff);
-  stuff.style.color = 'red';
+  seletectedtreenode.style.color = 'red';
   console.log(selectedtreenode);
   // selectedtreenode = this.referralid;
 }
