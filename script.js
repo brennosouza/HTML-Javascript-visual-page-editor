@@ -148,6 +148,11 @@ function addtoTreeList(liname, referralid){
   var list = document.getElementById("bodyul");
   var item = document.createElement("li");
   item.referralid = referralid;
+
+  var span = document.createElement("span");
+  span.textContent = liname;
+
+  item.appendChild(span);
   
   
 
@@ -163,7 +168,7 @@ function addtoTreeList(liname, referralid){
   
   
   console.log(item.referralid);
-  item.textContent = liname;
+  // item.textContent = liname;
   // item.classList.add(referralid);
 
   list.appendChild(item);

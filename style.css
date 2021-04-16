@@ -34,12 +34,12 @@ ul, #myUL {
   
   .active {
     display: block;
-    color: red;
+    /* color: red; */
   }
 
-  .selected {
+  /* .selected {
     color: red;
-  }
+  } */
 
   iframe, div {
     border: '1px solid #000000';
@@ -50,9 +50,9 @@ ul, #myUL {
     background-color: yellow;
   }
 
-  li:active {
-    color: yellow;
-  }
+  /* li.active {
+    background-color: yellow;
+  } */
 
   /* ul:active {
     background-color: yellow;
