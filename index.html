@@ -10,80 +10,39 @@
 
 
     <body id="body"> 
+		
+		<div class="tabcontainer" style="float:left; width: 10%; height: 30vh; overflow:auto;">
+		<!-- Tab links -->
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'Common')" id="defaultOpen">Common</button>
+			<button class="tablinks" onclick="openCity(event, 'Bootstrap')">Bootstrap</button>
+			<button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+		  </div>
 
-		<div id="buttoncontainer" style="float:left; width: 10%; height: 30vh; overflow:auto;" >
+		<!-- Tab content -->
+		<div id="Common" class="tabcontent">
 			<button onclick="newButton()">New button</button>
 			<button onclick="newHeader()">New header</button>
 			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
-			<button onclick="newButton()">New button</button>
 		</div>
+		
+		<div id="Bootstrap" class="tabcontent">
+			<button onclick="">Add Bootstrap to page</button>
+		</div>
+		
+		<div id="Tokyo" class="tabcontent">
+			<h3>Tokyo</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div>
+	</div>
+
+
+		<!-- <div id="buttoncontainer" style="float:left; width: 10%; height: 30vh; overflow:auto;" >
+			<button onclick="newButton()">New button</button>
+			<button onclick="newHeader()">New header</button>
+			<button onclick="newButton()">New button</button>
+		</div> -->
+
 
 		<iframe class="responsive-iframe" id="iframecontent" meta =" " style ="float:left; width:60vw; height: 90vh;"></iframe>
 
@@ -172,6 +131,9 @@
 				let iframe = getIframeDocument();
 				iframe.designMode = "on";
 			}
+
+			//Ativando o tab common por default
+			document.getElementById("defaultOpen").click();
 
 			if (selectedtreenode != null){
 				selectedtreenode.style.color = 'red';
