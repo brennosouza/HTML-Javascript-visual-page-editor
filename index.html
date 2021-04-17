@@ -86,13 +86,36 @@
 
 			<input type="checkbox" id="darkmodecheckbox" name="darkmodecheckbox" onclick="darkModeToggle()" checked="on">
 			<label for="darkmodecheckbox">Dark mode</label><br>
-		</div>
-
-		<div id="propertiesdiv" style="float: left; margin-left:5px; margin-top: 10px;">
+		
+		
+			<div id="propertiesdiv" style="padding: 5px; border:1px solid black; float: left; margin-left:10px; margin-top: 10px;">
 
 				Properties window
+
+				<table id="propertiestable" style="width:100%">
+					<tr>
+					  <th>Firstname</th>
+					  <th>Lastname</th>
+					  <th>Age</th>
+					</tr>
+					<tr>
+					  <td>Name</td>
+					  <td id="table-objectname"></td>
+					  <td>50</td>
+					</tr>
+					<tr>
+					  <td>Eve</td>
+					  <td>Jackson</td>
+					  <td>94</td>
+					</tr>
+				  </table>
 		
 		</div>
+
+		
+		</div>
+
+		
 
 
 		<script>
@@ -144,9 +167,11 @@
 			//Ativando o tab common por default
 			document.getElementById("defaultOpen").click();
 
-			if (selectedtreenode != null){
-				selectedtreenode.style.color = 'red';
-			}
+			// if (selectedtreenode != null){
+			// 	selectedtreenode.style.color = 'red';
+			// }
+
+			document.getElementById("table-objectname").textContent = selectedtreenode.textContent;
 
 			</script>
 

@@ -207,6 +207,8 @@ function treeListItemSelected(stuff){
   console.log(stuff);
   seletectedtreenode.style.color = 'red';
   console.log(selectedtreenode);
+
+  updatePropertiesTable();
   // selectedtreenode = this.referralid;
 }
 
@@ -238,6 +240,10 @@ function newHeader(){
 function treeNodeSelected(){
   this.parentElement.querySelector(".nested").classList.toggle("active");
   this.classList.toggle("caret-down");
+}
+
+function updatePropertiesTable(){
+  document.getElementById("table-objectname").textContent = selectedtreenode.textContent;
 }
 
 
