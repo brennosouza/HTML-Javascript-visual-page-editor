@@ -248,7 +248,10 @@ function updatePropertiesTable(){
   document.getElementById("table-objectid").textContent = selectedtreenode.id;
 }
 
-
+function updateTreeListName(it){
+  console.log(it.value);
+  selectedtreenode.textContent = it.value;
+}
 
 
 
