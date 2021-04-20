@@ -48,7 +48,7 @@
 
 
 
-		<div id="htmltree" style="float:left; margin-left: 10px; width: 20vw; overflow: auto;">
+		<div id="htmltree" style="float:left; margin-left: 10px; width: 24vw; height: 20vh ;overflow: auto;">
 
 			<ul id="treelist" >
 				<li id="htmlli" ><span class="caret" referralid="body">HTML</span>
@@ -88,27 +88,53 @@
 			<label for="darkmodecheckbox">Dark mode</label><br>
 		
 		
-			<div id="propertiesdiv" style="padding: 5px; border:1px solid black; float: left; margin-left:10px; margin-top: 10px;">
+			<div id="propertiesdiv" style="min-width: 24vw; padding: 5px; border:1px solid black; float: left; margin-left:10px; margin-top: 10px;">
 
-				Properties window
+				<b>Properties window</b>
 
 				<table id="propertiestable" style="width:100%">
-					<tr>
+					<!-- <tr>
 					  <th>Firstname</th>
 					  <th>Lastname</th>
 					  <th>Age</th>
-					</tr>
+					</tr> -->
+
+					<h4>Global attributes</h4>
+
 					<tr>
 					  <td>Name</td>
 					  <td id="table-objectname"></td>
-					  <td>50</td>
 					</tr>
 					<tr>
-					  <td>Eve</td>
-					  <td>Jackson</td>
-					  <td>94</td>
+					  <td>ID</td>
+					  <td id="table-objectid"></td>
 					</tr>
-				  </table>
+					<tr>
+						<td>Class</td>
+						<td id="table-objectclass"></td>
+					  </tr>
+					
+				</table>
+
+				<table id="propertiestable" style="width:100%">
+
+				  <h4>Style attributes</h4>
+
+				  <tr>
+					<td>tste</td>
+					<td id="table-objectname"></td>
+				  </tr>
+				  <tr>
+					<td>ID</td>
+					<td id="table-objectid"></td>
+				  </tr>
+				  <tr>
+					  <td>Class</td>
+					  <td id="table-objectclass"></td>
+					</tr>
+
+				</table>
+
 		
 		</div>
 
