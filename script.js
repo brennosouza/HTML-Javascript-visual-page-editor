@@ -244,9 +244,11 @@ function treeNodeSelected(){
 
 function updatePropertiesTable(){
   console.log()
-  document.getElementById("table-objectname").textContent = selectedtreenode.textContent;
+  document.getElementById("table-objectname").value = selectedtreenode.textContent;
   document.getElementById("table-objectid").textContent = selectedtreenode.id;
 }
+
+
 
 
 
